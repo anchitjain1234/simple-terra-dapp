@@ -1,18 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ScoreResponse",
+  "title": "UserScoreResponse",
   "type": "object",
   "required": [
-    "address",
-    "score"
+    "score",
+    "user_address"
   ],
   "properties": {
-    "address": {
-      "$ref": "#/definitions/Addr"
-    },
     "score": {
       "type": "integer",
       "format": "int32"
+    },
+    "user_address": {
+      "$ref": "#/definitions/Addr"
     }
   },
   "definitions": {

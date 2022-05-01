@@ -3,7 +3,7 @@ use std::fs::create_dir_all;
 
 use cosmwasm_schema::{export_schema, remove_schemas, schema_for};
 
-use simple_terra_dapp::msg::{ExecuteMsg, InstantiateMsg, QueryMsg, OwnerResponse, ScoreResponse};
+use simple_terra_dapp::msg::{ExecuteMsg, InstantiateMsg, QueryMsg, OwnerResponse, ScoreByTokenResponse, UserScoreResponse};
 use simple_terra_dapp::state::State;
 
 fn main() {
@@ -17,6 +17,7 @@ fn main() {
     export_schema(&schema_for!(QueryMsg), &out_dir);
     export_schema(&schema_for!(State), &out_dir);
     export_schema(&schema_for!(OwnerResponse), &out_dir);
-    export_schema(&schema_for!(ScoreResponse), &out_dir);
+    export_schema(&schema_for!(ScoreByTokenResponse), &out_dir);
+    export_schema(&schema_for!(UserScoreResponse), &out_dir);
 
 }
