@@ -1,5 +1,5 @@
 [package]
-name = "counter"
+name = "simple_terra_dapp"
 version = "0.1.0"
 authors = ["Anchit Jain <anchit@anchitja.in>"]
 edition = "2018"

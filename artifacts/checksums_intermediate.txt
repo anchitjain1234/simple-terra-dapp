@@ -1,1 +1,1 @@
-2c68e1501291df9ee05a48de56bdb4f25b4e6ebd08d525df789e5a9528ef2b68  ./target/wasm32-unknown-unknown/release/counter.wasm
+4adeb811ef99fc6108d9b1af5f8773ef810a4a6725accffc45a46957e66a5c0f  ./target/wasm32-unknown-unknown/release/simple_terra_dapp.wasm
