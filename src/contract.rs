@@ -73,7 +73,7 @@ pub fn try_set_score(
     }
     SCORE_BY_ADDRESS_AND_TOKEN.update(
         deps.storage,
-        (user_address.clone(), token_address.clone()),
+        (user_address.clone(), token_address),
         |_d: Option<i32>| -> StdResult<i32> { Ok(score) },
     )?;
     SCORE_BY_ADDRESS.update(
@@ -112,7 +112,7 @@ fn get_score(deps: Deps, address: Addr) -> StdResult<UserScoreResponse> {
     let score = SCORE_BY_ADDRESS.load(deps.storage, address.clone())?;
     Ok(UserScoreResponse {
         user_address: address,
-        score: score,
+        score,
     })
 }
 
@@ -124,18 +124,18 @@ fn get_score_for_token(
     if !SCORE_BY_ADDRESS_AND_TOKEN.has(deps.storage, (user_address.clone(), token_address.clone()))
     {
         return Ok(ScoreByTokenResponse {
-            user_address: user_address,
+            user_address,
             score: i32::MIN,
-            token_address: token_address,
+            token_address,
         });
     }
 
     let score = SCORE_BY_ADDRESS_AND_TOKEN
         .load(deps.storage, (user_address.clone(), token_address.clone()))?;
     Ok(ScoreByTokenResponse {
-        user_address: user_address,
-        score: score,
-        token_address: token_address,
+        user_address,
+        score,
+        token_address,
     })
 }
 
