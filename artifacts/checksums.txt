@@ -1,1 +1,1 @@
-2055e9e94e7cb8bec972eda6b443714e8be776c378d0c63aec93052d9e9a77f7  simple_terra_dapp.wasm
+4709c4f023cc04eb81fec9b623f52fe94df9d0beadfc880fa754d2a8ad6e03f5  simple_terra_dapp.wasm
